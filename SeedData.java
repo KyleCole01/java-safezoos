@@ -15,20 +15,17 @@ import java.util.ArrayList;
 
 @Transactional
 @Component
-public class SeedData implements CommandLineRunner
-{
+public class SeedData implements CommandLineRunner {
     RoleRepository rolerepos;
     UserRepository userrepos;
 
-    public SeedData(RoleRepository rolerepos, UserRepository userrepos)
-    {
+    public SeedData(RoleRepository rolerepos, UserRepository userrepos) {
         this.rolerepos = rolerepos;
         this.userrepos = userrepos;
     }
 
     @Override
-    public void run(String[] args) throws Exception
-    {
+    public void run(String[] args) throws Exception {
         Role r1 = new Role("admin");
         Role r2 = new Role("user");
 
